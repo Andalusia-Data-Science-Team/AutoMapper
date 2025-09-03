@@ -4,14 +4,6 @@ class ServiceMappingsProcessor:
     def __init__(self, mappings_path: str, feedback_path: str):
         self.mappings_path = mappings_path
         self.feedback_path = feedback_path
-        self.mappings = None
-        self.feedback = None
-        self.correct_mappings = None
-        self.correct_services = None
-        self.unrevised_mappings = None
-        self.revised_codes = None
-        self.match_services = None
-        self.mappings_after_edits = None
 
     def load_data(self):
         """Load mappings and feedback Excel files."""
@@ -70,3 +62,4 @@ processor = ServiceMappingsProcessor(
 
 processor.run()
 processor.save_to_excel("D:\\CodingSystem\\assets\\feedback\\mappings_after_edits.xlsx")
+
